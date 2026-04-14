@@ -1,0 +1,54 @@
+{
+  "name": "plaintext-police",
+  "displayName": "Plaintext Police",
+  "description": "Catches exposed private keys and secret phrases before they catch you.",
+  "version": "0.0.1",
+  "publisher": "yusuf-lawal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/plaintext-police"
+  },
+  "icon": "media/icon.png",
+  "categories": ["Linters", "Other"],
+  "keywords": ["security", "private key", "web3", "solidity", "env"],
+  "engines": {
+    "vscode": "^1.115.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Plaintext Police",
+      "properties": {
+        "plaintextPolice.enableSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play audio alert when a private key is detected"
+        }
+      }
+    }
+  },
+  "vsce": {
+    "dependencies": false
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.115.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
