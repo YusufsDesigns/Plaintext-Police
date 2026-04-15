@@ -1,7 +1,20 @@
 {
   "name": "plaintext-police",
   "displayName": "Plaintext Police",
-  "description": "Catches exposed private keys and secret phrases before they catch you.",
+  "description": "Security extension that detects accidentally exposed private keys and secrets in your code, .env files, and Makefiles before you push them to git.",
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "security",
+    "private key",
+    "web3",
+    "solidity",
+    "dotenv",
+    "secrets",
+    "blockchain"
+  ],
   "version": "0.0.1",
   "publisher": "yusuf-lawal",
   "repository": {
@@ -9,8 +22,11 @@
     "url": "https://github.com/YusufsDesigns/Plaintext-Police"
   },
   "icon": "media/icon.png",
-  "categories": ["Linters", "Other"],
-  "keywords": ["security", "private key", "web3", "solidity", "env"],
+  "license": "MIT",
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.115.0"
   },
